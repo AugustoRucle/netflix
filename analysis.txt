@@ -1,0 +1,35 @@
+NAVBAR
+[leftContent]
+	|
+	|  (Escritorio)
+	| -> [Logo] [Inicio, Serie, Peliculas, Novedades populares, Mi lista]
+
+	|
+	|	(Movil)
+	|-> [Logo] [Explorar]
+
+[rightContent]
+	|
+	|  (Escritorio)
+	| -> [Icono Buscar] [Campana] [Avatar - Icono Arrow abajo]
+			|						|
+			|						|
+			|-> Si presionar input, entonces desplegar input
+									|
+									|-> Aparecer menún
+										[Lista de perfiles]
+										[Administrar perfiles]
+										------------------------
+										[Cuenta]
+										[Centro de ayuda]
+										[Cerrar Sesión de Netflix]
+
+
+ROW
+[video]
+  |
+  |-> Si el mouse esta sobre el video 
+	|
+	|-> Agregar zoom
+	 |
+	 | -> Despues de 3 segundos, cambiar imagen por 
