@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Nav.css';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faSearch, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import AccountMenu from './AccountMenu';
+import Releases from './Releases';
 
 function Nav() {
 	const [idTimeOutActivedSearch, setIdTimeOutActivedSearch] = useState('');
@@ -130,11 +132,13 @@ function Nav() {
 						</div>
 				}
 
-				<img
-					className="nav__avatar"
-					src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
-					alt="profile netflix"
-				/>
+				<div>
+					<Releases />
+				</div>
+
+				<div>
+					<AccountMenu />
+				</div>
 			</div>
 		</div>
 	</div>

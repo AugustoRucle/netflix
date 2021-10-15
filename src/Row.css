@@ -3,11 +3,19 @@
 	margin-left: 20px;
 }
 
+.row .row__title
+{
+	font-size: 1.1rem;
+	font-weight: 600;
+	padding: 0px 20px;
+	color: #fff;
+}
+
 .row__posters {
 	display: flex;
 	overflow-y: hidden;
 	overflow-x: scroll;
-	padding: 20px
+	padding: 0px 20px 20px 20px
 }
 
 .row__posters::-webkit-scrollbar {

@@ -1,0 +1,82 @@
+.releases .releases__icon
+{
+	color: #FFFFFF;
+	width: 19px;
+	height: 19px;
+	font-size: 22px;
+}
+
+.releases-popover .ant-popover-inner
+{
+    background-color: #000000 !important;
+    background-clip: padding-box !important;
+    border: 1px solid #424242 !important;
+    border-top: 2px solid #FFFFFF !important;
+	border-radius: 2px;
+    overflow-y: auto;
+    max-height: 500px;
+}
+
+.releases-popover .ant-popover-inner-content
+{
+	padding: 0px;
+}
+
+.releases-popover .releases-popover__content
+{
+	color: #FFFFFF;
+}
+
+.releases-popover__release
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 15px 0px;
+	width: 400px;
+	cursor: pointer;
+}
+
+.releases-popover__release:nth-child(n)
+{
+	border-bottom: 1px solid #424242;
+}
+
+.releases-popover__release:last-child
+{
+	border-bottom: 0px;
+}
+
+
+.releases-popover__release .releases-popover__portada
+{
+	width: 120px;
+	height: 80px;
+	object-fit: cover;
+	border-radius: 5px;
+	margin-left: 15px;
+	margin-right: 20px;
+}
+
+.releases-popover__release .releases-popover__about-release
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	margin-right: 15px;
+}
+
+.releases-popover__about-release .releases-popover__title
+{
+	font-size: 16px;
+	color: #FFFFFF;
+	font-weight: 300;
+	margin-bottom: 5px;
+}
+
+.releases-popover__about-release .releases-popover__time
+{
+	font-size: 11px;
+    color: #BDBDBD;
+	margin-bottom: 0px;
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import './HomeScreen.css';
 
+import ModalViewMovie from "./ModalViewMovie";
 import Banner from "./Banner";
 import Row from "./Row";
 import Nav from "./Nav";
@@ -13,53 +14,57 @@ function HomeScreen() {
 		
 		<Banner />
 
-		<Row
-			title="NETFLIX ORIGINALS"
-			fetchUrl={request.fetchNetflixOriginals}
-			isLargeRow
-		/>
+		<div className="home-screen__rows">
+			<ModalViewMovie />
 
-		<Row
-			title="Trending Now"
-			fetchUrl={request.fetchTrending}
-			isLargeRow
-		/>
+			<Row
+				title="NETFLIX ORIGINALS"
+				fetchUrl={request.fetchNetflixOriginals}
+				isLargeRow
+			/>
 
-		<Row
-			title="Top Rated"
-			fetchUrl={request.fetchTopRated}
-			isLargeRow
-		/>
+			<Row
+				title="Trending Now"
+				fetchUrl={request.fetchTrending}
+				isLargeRow
+			/>
 
-		<Row
-			title="Action Movies"
-			fetchUrl={request.fetchActionMovies}
-			isLargeRow
-		/>
+			<Row
+				title="Top Rated"
+				fetchUrl={request.fetchTopRated}
+				isLargeRow
+			/>
 
-		<Row
-			title="Comedy Movies"
-			fetchUrl={request.fetchComedyMovies}
-			isLargeRow
-		/>
+			<Row
+				title="Action Movies"
+				fetchUrl={request.fetchActionMovies}
+				isLargeRow
+			/>
 
-		<Row
-			title="Horror Movies"
-			fetchUrl={request.fetchHorrorMovies}
-			isLargeRow
-		/>
+			<Row
+				title="Comedy Movies"
+				fetchUrl={request.fetchComedyMovies}
+				isLargeRow
+			/>
 
-		<Row
-			title="Romance Movies"
-			fetchUrl={request.fetchRomanceMovies}
-			isLargeRow
-		/>
+			<Row
+				title="Horror Movies"
+				fetchUrl={request.fetchHorrorMovies}
+				isLargeRow
+			/>
 
-		<Row
-			title="Documentaries"
-			fetchUrl={request.fetchDocumentariesMovies}
-			isLargeRow
-		/>
+			<Row
+				title="Romance Movies"
+				fetchUrl={request.fetchRomanceMovies}
+				isLargeRow
+			/>
+
+			<Row
+				title="Documentaries"
+				fetchUrl={request.fetchDocumentariesMovies}
+				isLargeRow
+			/>
+		</div>
 	</div>
 }
 

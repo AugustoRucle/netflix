@@ -4,7 +4,7 @@
 	top: 0px;
 	padding: 20px;
 	width: 100%;
-	height: 25px;
+	height: 75px;
 	z-index: 1;
 
 	background-image: linear-gradient(to bottom,rgba(0,0,0,.7) 10%,rgba(0,0,0,0));
@@ -31,7 +31,17 @@
 {
 	display: flex;
 	align-items: center;
-	padding-right: 110px;
+	height: 32px;
+}
+
+.nav__right-contents > div:nth-child(n)
+{
+	margin: 0px 10px;
+}
+
+.nav__right-contents > div:last-child
+{
+	margin: 0px 10px;
 }
 
 .nav__black
@@ -41,7 +51,7 @@
 
 .nav__logo
 {
-	width: 80px;
+	width: 110px;
 	object-fit: contain;
 	padding-left: 20px;
 	cursor: pointer;
@@ -60,6 +70,7 @@
 	list-style-type: none;
 	align-items: center;
 	justify-content: flex-start;
+	margin-bottom: 0px;
 }
 
 .nav__links .nav__link:nth-child(n) a
@@ -67,7 +78,7 @@
 	color: #e5e5e5;
 	margin-left: 1rem;
 	text-decoration: none;
-	font-size: 0.95rem;
+	font-size: 0.80rem;
 }
 
 .nav__links .nav__link--active
@@ -76,13 +87,19 @@
 	color: #FFFFFF;
 }
 
+.nav__links .nav__link:hover a
+{
+	color: #BDBDBD;
+	transition: all 0.2s;
+}
+
 .nav__search
 {
 	position: relative;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	height: 32px;
+	height: 30px;
 	width: 0px;
 	background: #212121;
 	border: 1px solid #ffffff;
@@ -138,4 +155,6 @@
 	padding: 9px 0px 9px 0px;
 	z-index: 1;
 	color: #ffffff;
+	height: 35px;
+	width: 35px
 }

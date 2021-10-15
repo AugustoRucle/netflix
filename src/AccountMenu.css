@@ -1,0 +1,126 @@
+.account-menu
+{
+	position: relative;
+	margin-left: 10px;
+}
+
+.account-menu .account-dropdown-button
+{
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	width: 55px;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+}
+
+.account-dropdown-button .account-dropdown-button__avatar
+{
+	object-fit: cover;
+	width: 30px;
+	height: 30px;
+}
+.account-dropdown-button__icon {
+	color: #FFFFFF;
+	font-size: 25px;
+	transition: all 0.3s;
+}
+
+.account-dropdown-button__icon.account-dropdown-button__icon-open {
+	transform: rotate(180deg);
+}
+
+.account-menu-popover .ant-popover-inner-content
+{
+    background-color: #000000 !important;
+    background-clip: padding-box !important;
+    border: 1px solid #424242 !important;
+    border-top: 2px solid #FFFFFF !important;
+	color: #FFFFFF !important;
+	padding: 12px 0px;
+	border-radius: 2px;
+    overflow-y: auto;
+    max-height: 500px;
+	width: 220px;
+}
+
+.account-menu-popover .profiles
+{
+	padding: 0px 12px;
+	display: flex;
+	flex-direction: column;
+}
+
+.account-menu-popover .profiles .profile
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding-right: 10px;
+}
+
+.account-menu-popover .profiles .profile .profile-img
+{
+	height: 40px;
+	width: 40px;
+	object-fit: cover;
+}
+
+.account-menu-popover .profiles .profile .profile-name
+{
+	margin-left: 10px;
+	font-size: 12px;
+	word-break: break-all;
+	margin-bottom: 0px;
+}
+
+.account-menu-popover .profiles .profile:nth-child(n)
+{
+	margin-bottom: 10px;
+}
+
+.account-menu-popover .profiles .profile:last-child
+{
+	margin-bottom: 15px;
+}
+
+.account-menu-popover .profiles
+{
+	display: flex;
+	flex-direction: column;
+}
+
+.account-menu-popover .account-dropdow-menu .account-link
+{
+	padding: 0px 12px;
+	color: #FFFFFF;
+	font-size: 12px;
+}
+
+.account-menu-popover .account-dropdow-menu .account-link:hover
+{
+	text-decoration: underline;
+}
+
+.account-menu-popover .account-dropdow-menu .account-divider
+{
+	background-color: #FFFFFF;
+	margin: 10px 0px
+}
+
+.account-menu-popover .account-dropdow-menu .account-settings
+{
+	display: flex;
+	flex-direction: column;
+}
+
+.account-dropdow-menu .account-settings .account-link:nth-child(n)
+{
+	margin-bottom: 8px;
+}
+
+.account-dropdow-menu .account-settings .account-link:last-child
+{
+	margin-bottom: 2px;
+}

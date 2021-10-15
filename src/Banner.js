@@ -1,6 +1,9 @@
 import React, {  useState, useEffect } from 'react';
 import './Banner.css';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlay, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+
 import requests from './Request';
 import axios from './axios';
 
@@ -9,12 +12,19 @@ function Banner () {
 	
 	useEffect(() => {
 		async function fetchData() {
-			const request = await axios.get(requests.fetchNetflixOriginals);
-			setMovie(
-				request.data.results[
-					Math.floor(Math.random() * request.data.results.length - 1)
-				]
-			);
+			let validMovie = false;
+			do {
+				const request = await axios.get(requests.fetchNetflixOriginals);
+				const { results } = request.data;
+				const randomResult = (Math.random() * results.length - 1).toFixed(0);
+
+				if (results[randomResult]) {
+					setMovie(results[randomResult]);
+					validMovie = true;
+				} else {
+					validMovie = false;
+				}
+			} while(!validMovie)
 		}
 
 		fetchData();
@@ -24,7 +34,7 @@ function Banner () {
 		return string?.length > n ? string.substr(0, n - 1) + '...' : string;
 	}
 
-	return <header
+	return <div
 		className="banner"
 		style={{
 			backgroundSize: "cover",
@@ -38,23 +48,34 @@ function Banner () {
 			</h1>
 
 			<div className="banner__buttons">
-				<button className="banner__button">
-					Play
-				</button>
-
-				<button className="banner__button">
-					My List
-				</button>
-
 				<h1 className="banner__description">
 					{ truncate(movie?.overview , 150) }
 				</h1>
+				
+				<button className="banner__button banner__button---active">
+					<FontAwesomeIcon
+						className="banner__button-icon"
+						icon={faPlay}
+					/>
+
+					Reproducir
+				</button>
+
+				<button className="banner__button">
+					<FontAwesomeIcon
+						className="banner__button-icon"
+						icon={faInfoCircle}
+					/>
+
+					Más información
+				</button>
+
 			</div>
 
 		</div>
-		
-		<div className="banner--fadeBottom" />
-	</header>
+
+		<div className="banner--fade-bottom" />
+	</div>
 }	
 
 export default Banner;
