@@ -21,3 +21,8 @@ code {
 {
 	font-weight: 600 !important;
 }
+
+.font-italic
+{
+	font-style: italic !important;
+}
